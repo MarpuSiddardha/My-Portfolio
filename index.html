@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marpu Siddardha | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Modal -->
+<div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<header>
+  <h1>Marpu Siddardha</h1>
+  <p id="typing-text"></p>
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="theme-toggle">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider round"></span>
+    </label>
+    <em>Toggle Dark Mode</em>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="fade-in">
+  <h2>About Me</h2>
+  <p>
+    Passionate individual excited to embark on a career in Software Engineering. I eager to collaborate with experienced professionals and contribute to high-quality software solutions.
+  </p>
+</section>
+
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Gas Leakage Detector (IoT)</h3>
+      <div class="project-details">
+        <p>Designed a gas leakage detector using Arduino. Sends SMS alerts when gas levels exceed threshold.</p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Student-Centric E-Commerce Backend</h3>
+      <div class="project-details">
+        <p>Java, Spring Boot, PostgreSQL</p>
+        <ul>
+          <li>CRUD operations for student profiles</li>
+          <li>Shopping cart functionality</li>
+          <li>Robust error handling and security</li>
+        </ul>
+        <a href="https://github.com/MarpuSiddardha/Student-Centric-E-Commerce-BackEnd" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Data Acquisition System</h3>
+      <div class="project-details">
+        <p><strong>Role/Title:</strong> Backend Developer</p>
+        <p><strong>Description:</strong> Collecting different types of sensor data and generating reports including rules, alarms, and schedules.</p>
+      
+        <ul>
+          <li>REST API Development using Java and Spring Boot</li>
+          <li>API Documentation with Swagger</li>
+          <li>Implementation of Scheduling Service for automatic report generation</li>
+          <li>API Testing with Postman and Swagger</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills" class="fade-in">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><i class="fas fa-code"></i> <strong>Programming Languages:</strong> Java</li>
+    <li><i class="fas fa-cogs"></i> <strong>Frameworks & Tools:</strong> Spring Boot, REST APIs, OOPs</li>
+    <li><i class="fab fa-git-alt"></i> <strong>Version Control:</strong> Git & GitHub</li>
+    <li><i class="fas fa-vial"></i> <strong>API Testing:</strong> Postman</li>
+    <li><i class="fas fa-globe"></i> <strong>Web Development:</strong> HTML, CSS</li>
+    <li><i class="fas fa-database"></i> <strong>Databases and Management:</strong> SQL, PostgreSQL</li>
+  </ul>
+</section>
+
+<section id="contact" class="fade-in">
+  <h2>Contact</h2>
+  <p>Email: siddhu.marpu111@gmail.com</p>
+  <p>Phone: +91-8639527856</p>
+  <p><a href="https://github.com/MarpuSiddardha" target="_blank">GitHub Profile</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Marpu Siddardha</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
