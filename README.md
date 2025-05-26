@@ -57,3 +57,10 @@ Welcome to my personal portfolio website! This project showcases my background, 
 1. Clone the repository:
    ```bash
    git clone https://github.com/MarpuSiddardha/My-Portfolio
+
+
+## 🔗 Live Demo
+
+Check out the live version of this portfolio here:  
+👉 Live Demo
+ https://MarpuSiddardha.github.io/My-Portfolio/
