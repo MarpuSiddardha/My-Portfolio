@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marpu Siddardha | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="shared.css" />
+  <!-- Light mode styles (default) -->
+  <link id="theme-stylesheet" rel="stylesheet" href="light-mode.css" />
 </head>
 <body>
 
@@ -32,27 +35,30 @@
 <nav>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
+  <a href="#skills">Tech Stack</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about" class="fade-in">
-  <h2>About Me</h2>
-  <p>
-    Passionate individual excited to embark on a career in Software Engineering. I eager to collaborate with experienced professionals and contribute to high-quality software solutions.
-  </p>
+  <div class="about-grid">
+    <div class="about-card">
+      <h2>Hey there! 👋</h2>
+      <p>
+        I'm <strong>Marpu Siddardha</strong> — a backend enthusiast, and someone who loves solving real-world problems with code. Whether it's building RESTful APIs or implementing Services, I'm always exploring new ways to make tech work smarter.
+      </p>
+      <p>
+        When I'm not coding, you might find me diving into tech blogs, exploring open-source projects, or just enjoying a good cup of coffee ☕ while brainstorming my next side project.
+      </p>
+      <p>
+        Let’s connect and create something amazing together!
+      </p>
+    </div>
+  </div>
 </section>
 
 <section id="projects" class="fade-in">
   <h2>Projects</h2>
   <div class="project-grid">
-
-    <div class="project-card" onclick="toggleDetails(this)">
-      <h3>Gas Leakage Detector (IoT)</h3>
-      <div class="project-details">
-        <p>Designed a gas leakage detector using Arduino. Sends SMS alerts when gas levels exceed threshold.</p>
-      </div>
-    </div>
 
     <div class="project-card" onclick="toggleDetails(this)">
       <h3>Student-Centric E-Commerce Backend</h3>
@@ -72,13 +78,13 @@
       <div class="project-details">
         <p><strong>Role/Title:</strong> Backend Developer</p>
         <p><strong>Description:</strong> Collecting different types of sensor data and generating reports including rules, alarms, and schedules.</p>
-      
         <ul>
           <li>REST API Development using Java and Spring Boot</li>
           <li>API Documentation with Swagger</li>
           <li>Implementation of Scheduling Service for automatic report generation</li>
           <li>API Testing with Postman and Swagger</li>
         </ul>
+        <a href="https://github.com/MarpuSiddardha/Data-Acquisition" target="_blank">View on GitHub</a>
       </div>
     </div>
 
@@ -86,15 +92,76 @@
 </section>
 
 <section id="skills" class="fade-in">
-  <h2>Technical Skills</h2>
+  <h2 class="section-title">Tech Stack</h2>
   <ul>
-    <li><i class="fas fa-code"></i> <strong>Programming Languages:</strong> Java</li>
-    <li><i class="fas fa-cogs"></i> <strong>Frameworks & Tools:</strong> Spring Boot, REST APIs, OOPs</li>
-    <li><i class="fab fa-git-alt"></i> <strong>Version Control:</strong> Git & GitHub</li>
-    <li><i class="fas fa-vial"></i> <strong>API Testing:</strong> Postman</li>
-    <li><i class="fas fa-globe"></i> <strong>Web Development:</strong> HTML, CSS</li>
-    <li><i class="fas fa-database"></i> <strong>Databases and Management:</strong> SQL, PostgreSQL</li>
+    <li>
+      <strong>Programming Languages:</strong>
+      <div class="tech-icons">
+        <div class="tech-item"><i class="fab fa-java"></i><span>Java</span></div>
+      </div>
+    </li>
+
+    <li>
+      <strong>Frameworks & Tools:</strong>
+      <div class="tech-icons">
+        <div class="tech-item"><i class="fas fa-leaf"></i><span>Spring Boot</span></div>
+        <div class="tech-item"><i class="fas fa-plug"></i><span>REST APIs</span></div>
+        <div class="tech-item"><i class="fas fa-cube"></i><span>OOPs</span></div>
+      </div>
+    </li>
+
+    <li>
+      <strong>Version Control:</strong>
+      <div class="tech-icons">
+        <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+        <div class="tech-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+      </div>
+    </li>
+
+    <li>
+      <strong>API Testing:</strong>
+      <div class="tech-icons">
+        <div class="tech-item"><i class="fas fa-vial"></i><span>Postman</span></div>
+      </div>
+    </li>
+
+    <li>
+      <strong>Web Development:</strong>
+      <div class="tech-icons">
+        <div class="tech-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+        <div class="tech-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+      </div>
+    </li>
+
+    <li>
+      <strong>Databases and Management:</strong>
+      <div class="tech-icons">
+        <div class="tech-item"><i class="fas fa-database"></i><span>SQL</span></div>
+        <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+      </div>
+    </li>
   </ul>
+</section>
+
+<section id="certifications" class="fade-in">
+  <h2>Certifications</h2>
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <h3>Introduction to HTML, CSS and JavaScript</h3>
+      <p><strong>Issued by:</strong> IBM (Coursera)</p>
+      <p><strong>Date:</strong> July 2024</p>
+      <a href="IBM_Coursera_html_css_javascript.pdf" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+      <h3>Agile with Atlassian Jira</h3>
+      <p><strong>Issued by:</strong> Atlassian University (Coursera)</p>
+      <p><strong>Date:</strong> July 2024</p>
+      <a href="JiraAtlassian.pdf" target="_blank">View Certificate</a>
+    </div>
+
+  </div>
 </section>
 
 <section id="contact" class="fade-in">
