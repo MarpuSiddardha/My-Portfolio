@@ -1,0 +1,238 @@
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  header,
+  footer {
+    background-color: #1f1f1f;
+  }
+  
+  nav {
+    background-color: #2c2c2c;
+  }
+  
+  nav a {
+    color: #00e5ff;
+  }
+  
+  /* Project Cards */
+.project-card {
+    background-color: #1e1e1e; /* Dark background for cards */
+    color: #f0f0f0; /* Ensure text is visible */
+    border-radius: 12px; /* Rounded corners */
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    background-color: rgba(0, 188, 212, 0.1); /* Slightly lighter background on hover */
+    transform: translateY(-5px); /* Slight upward movement */
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4), /* Glow effect */
+                0 0 15px rgba(0, 188, 212, 0.5); /* Additional glow for hover */
+  }
+  
+ /* Projects Section Title */
+#projects h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c2e1e4; /* Accent color for the title */
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  /* Project Card Title */
+  .project-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c2e1e4; /* Accent color for project card titles */
+    margin: 0;
+    text-align: center;
+  }
+  .resume-btn {
+    background-color: #00bcd4;
+    color: white;
+  }
+  
+  .resume-btn:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Modal Content */
+.modal-content {
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Dark gradient background */
+    color: #f0f0f0; /* Ensure text is visible */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  
+  /* Modal Title */
+  #modal-body h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c2e1e4; /* Accent color for the title */
+    margin-bottom: 1rem;
+  }
+  
+  /* Modal Labels (Role/Title, Description) */
+  .modal-label {
+    font-weight: bold;
+    color: #00e5ff; /* Accent color for labels */
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-value {
+    color: #f0f0f0; /* Ensure text is visible */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsibilities Section */
+  .modal-tasks h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00e5ff; /* Accent color for "Responsibilities" */
+    margin-bottom: 1rem;
+  }
+  
+  .modal-tasks ul {
+    padding-left: 1.5rem;
+    list-style-type: none;
+  }
+  
+  .modal-tasks ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    position: relative;
+    color: #f0f0f0; /* Ensure text is visible */
+  }
+  
+  .modal-tasks ul li::before {
+    content: "✔";
+    color: #00e5ff; /* Accent color for checkmarks */
+    margin-right: 8px;
+  }
+  
+  /* GitHub Link Button */
+  .modal-link {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #00e5ff; /* Bright button color */
+    color: #121212; /* Dark text for contrast */
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .modal-link:hover {
+    background-color: #00bcd4; /* Slightly darker hover color */
+    transform: translateY(-3px); /* Subtle hover effect */
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4); /* Glow effect */
+  }
+  
+  /* Modal Blocks (Role/Title, Description) */
+  .modal-block {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #2a2a2a; /* Slightly lighter background for blocks */
+    border-left: 4px solid #00e5ff; /* Accent border */
+    border-radius: 8px;
+    color: #f0f0f0; /* Ensure text is visible */
+  }
+  
+  .modal-block:hover {
+    background: rgba(0, 188, 212, 0.1); /* Highlight on hover */
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.2); /* Glow effect */
+  }
+  
+  .about-card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  .about-card:hover {
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(0, 188, 212, 0.3); /* Subtle glow for dark mode */
+  }
+  
+  .cert-card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  /* Tech Stack Section */
+#skills {
+    background-color: #252525; /* Slightly lighter background for better contrast */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
+    padding: 2.5rem;
+    border-radius: 12px;
+  }
+  
+  #skills ul li {
+    background-color: #2e2e2e; /* Lighter background for list items */
+    color: #f0f0f0; /* Ensure text is visible */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for list items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #skills ul li:hover {
+    background-color: rgba(0, 188, 212, 0.2); /* Highlight on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3); /* Glow effect on hover */
+  }
+  
+  #skills ul li strong {
+    font-size: 1.2rem;
+    color: #c2e1e4; /* Accent color for headings */
+    margin-bottom: 1rem;
+  }
+  
+  /* Tech Icons */
+  .tech-item {
+    background-color: #2e2e2e; /* Match list item background */
+    color: #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tech-item:hover {
+    background-color: rgba(0, 188, 212, 0.3); /* Highlight on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4); /* Glow effect on hover */
+  }
+  
+  .tech-item i {
+    font-size: 2rem;
+    color: #00e5ff; /* Accent color for icons */
+  }
+  
+  .tech-item span {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #f0f0f0; /* Ensure text is visible */
+  }
+  
+/* Section Title */
+.section-title {
+    color: #c2e1e4 !important; /* Dark mode accent color */
+  }
+  
+  .section-title::after {
+    background-color: #c2e1e4; /* Dark mode underline color */
+  }
+  

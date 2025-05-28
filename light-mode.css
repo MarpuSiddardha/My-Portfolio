@@ -1,0 +1,115 @@
+body {
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background: #1e1e2f;
+    color: white;
+  }
+  
+  nav {
+    background: #333;
+  }
+  
+  nav a {
+    color: white;
+  }
+  
+  nav a:hover {
+    color: #00bcd4;
+  }
+  
+  .project-card {
+    background: white;
+  }
+  
+  .project-card:hover {
+    background-color: #f0faff;
+  }
+  
+  footer {
+    background: #1e1e2f;
+    color: white;
+  }
+  
+  .resume-btn {
+    background-color: #00bcd4;
+    color: white;
+  }
+  
+  .resume-btn:hover {
+    background-color: #0097a7;
+  }
+  
+  .modal-content {
+    background: linear-gradient(135deg, #ffffff, #f0faff);
+  }
+  
+  .modal-block {
+    background: #f0faff;
+    border-left: 4px solid #00bcd4;
+  }
+  
+  .modal-link {
+    background-color: #00bcd4;
+  }
+  
+  .modal-link:hover {
+    background-color: #0097a7;
+  }
+  
+  .about-card {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  .about-card:hover {
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(0, 119, 204, 0.3); /* Subtle glow for light mode */
+  }
+  
+  .cert-card {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+
+  #skills {
+    background-color: #ffffff;
+  }
+
+
+/* Section Title */
+.section-title {
+    color: #0d0f0f !important;/* Light mode accent color */
+  }
+  
+  .section-title::after {
+    background-color: #0a0b0b !important; /* Light mode underline color */
+  }
+
+
+  #skills ul li {
+    background-color: rgba(240, 240, 240, 0.8);
+  }
+  
+  #skills ul li:hover {
+    background-color: rgba(0, 188, 212, 0.1);
+  }
+  
+  .tech-item {
+    background-color: rgba(240, 240, 240, 0.8);
+  }
+  
+  .tech-item:hover {
+    background-color: rgba(0, 188, 212, 0.2);
+  }
+
+  .tech-item i {
+  color: #0077cc; /* Light mode icon color */
+}
+
+.tech-item span {
+  color: #333333; /* Dark text for light mode */
+}
