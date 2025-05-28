@@ -38,7 +38,6 @@ Welcome to my personal portfolio website! This project showcases my background, 
 
 ## 🧠 Projects Highlighted
 
-- **Gas Leakage Detector (IoT)** – Arduino-based alert system
 - **Student-Centric E-Commerce Backend** – Java + Spring Boot + PostgreSQL
 - **Data Acquisition System** – REST APIs, Swagger, Scheduling
 
