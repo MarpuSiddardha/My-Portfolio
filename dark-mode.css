@@ -1,24 +1,86 @@
+
 body {
-    background-color: #121212;
-    color: #f0f0f0;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #f0f0f0;
+  background: linear-gradient(120deg, #181c24 0%, #232946 50%, #1e1e2f 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -120px;
+  left: -120px;
+  width: 120vw;
+  height: 120vh;
+  background: url('data:image/svg+xml;utf8,<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg"><ellipse cx="400" cy="300" rx="300" ry="180" fill="%2300e5ff" fill-opacity="0.07"/><ellipse cx="200" cy="600" rx="120" ry="80" fill="%2300bcd4" fill-opacity="0.09"/><ellipse cx="700" cy="100" rx="90" ry="60" fill="%23232946" fill-opacity="0.08"/></svg>');
+  z-index: 0;
+  pointer-events: none;
+}
   
-  header,
+  header h1 {
+  background: linear-gradient(90deg, #00e5ff, #00bcd4 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 24px #00e5ff44;
+}
+
+.subtitle {
+  background: linear-gradient(90deg, #00e5ff, #00bcd4 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #00e5ff; /* fallback */
+  text-shadow: 0 4px 16px #00e5ff44;
+}
+
+.toggle-label {
+  background: linear-gradient(90deg, #00e5ff, #00bcd4 80%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 16px #00e5ff44;
+  animation: gradient-move 3s linear infinite;
+}
+
   footer {
     background-color: #1f1f1f;
   }
   
-  nav {
-    background-color: #2c2c2c;
-  }
-  
-  nav a {
-    color: #00e5ff;
-  }
+ nav {
+  background: rgba(30,40,60,0.01);
+  box-shadow: 0 6px 32px rgba(0,229,255,0.10);
+  border: 1px solid rgba(0,229,255,0.10);
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  color: #00e5ff;
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(0,229,255,0.10);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0,229,255,0.13);
+}
   
   /* Project Cards */
 .project-card {
-    background-color: #1e1e1e; /* Dark background for cards */
     color: #f0f0f0; /* Ensure text is visible */
     border-radius: 12px; /* Rounded corners */
     padding: 1.5rem;
@@ -60,16 +122,28 @@ body {
     background-color: #0097a7;
   }
   
+  .modal {
+  background: rgba(20, 24, 34, 0.75); /* semi-transparent dark overlay */
+  backdrop-filter: blur(10px);
+}
   /* Modal Content */
 .modal-content {
-    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Dark gradient background */
-    color: #f0f0f0; /* Ensure text is visible */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
-    border-radius: 12px;
-    padding: 2rem;
-  }
+  background: linear-gradient(135deg, #232946 60%, #181c24 100%);
+  color: #c2e1e4;
+  border: 1px solid rgba(0,229,255,0.13);
+  box-shadow: 0 10px 40px rgba(0,229,255,0.10);
+  border-radius: 16px;
+  padding: 2rem;
+}
   
+.modal-block {
+  background: rgba(0,229,255,0.13);
+  border-left: 4px solid #00e5ff;
+  border-radius: 10px;
+  color: #c2e1e4;
+  margin-bottom: 1.2rem;
+  padding: 1rem 1.2rem;
+}
   /* Modal Title */
   #modal-body h3 {
     font-size: 2rem;
@@ -79,18 +153,27 @@ body {
   }
   
   /* Modal Labels (Role/Title, Description) */
-  .modal-label {
-    font-weight: bold;
-    color: #00e5ff; /* Accent color for labels */
-    margin-bottom: 0.5rem;
-  }
+ .modal-label {
+  color: #00e5ff;
+}
   
   .modal-value {
     color: #f0f0f0; /* Ensure text is visible */
     font-size: 1rem;
     line-height: 1.6;
   }
+
+  .modal-link {
+  background-color: #00e5ff;
+  color: #181c24;
+  box-shadow: 0 4px 16px #00e5ff44;
+}
   
+.modal-link:hover {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
   /* Responsibilities Section */
   .modal-tasks h4 {
     font-size: 1.2rem;
@@ -152,36 +235,52 @@ body {
   }
   
   .about-card {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    color: #c2e1e4;
   }
   
   .about-card:hover {
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5),
-                0 0 20px rgba(0, 188, 212, 0.3); /* Subtle glow for dark mode */
+    box-shadow:0 8px 20px rgba(0, 188, 212, 0.4),
+              0 0 15px rgba(0, 188, 212, 0.5);/* Subtle glow for dark mode */
   }
+
+  #certifications .section-title,
+#certifications h2 {
+  color: #c2e1e4 !important;
+}
   
-  .cert-card {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-  }
+ .cert-card {
+  background: rgba(30, 30, 30, 0.22); /* Same as project-card */
+  color: #c2e1e4;
+  border: 1px solid rgba(0,188,212,0.10);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cert-card:hover {
+  background: rgba(0, 188, 212, 0.10);
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4),
+              0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+.cert-card a {
+  color: #00e5ff;
+}
+
+.cert-card a:hover {
+  color: #00bcd4;
+}
 
   /* Tech Stack Section */
 #skills {
-    background-color: #252525; /* Slightly lighter background for better contrast */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
-    padding: 2.5rem;
+    padding: 1.5rem;
     border-radius: 12px;
   }
   
   #skills ul li {
-    background-color: #2e2e2e; /* Lighter background for list items */
     color: #f0f0f0; /* Ensure text is visible */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for list items */
+    border: 1px solid rgba(255, 255, 255, 0.01); /* Subtle border for list items */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
     padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 10px;
     margin-bottom: 1.5rem;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -200,6 +299,7 @@ body {
   
   /* Tech Icons */
   .tech-item {
+     background: rgba(30,30,30,0.1); /* Transparent glass effect */
     background-color: #2e2e2e; /* Match list item background */
     color: #f0f0f0;
     border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
@@ -211,6 +311,7 @@ body {
   }
   
   .tech-item:hover {
+     background: rgba(0, 188, 212, 0.10);
     background-color: rgba(0, 188, 212, 0.3); /* Highlight on hover */
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4); /* Glow effect on hover */
@@ -236,3 +337,9 @@ body {
     background-color: #c2e1e4; /* Dark mode underline color */
   }
   
+
+#contact,
+#contact * {
+  color: #c2e1e4 !important; /* Use your accent or any color you prefer */
+}
+

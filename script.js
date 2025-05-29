@@ -92,9 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const link = rawDetails.querySelector("a");
-    if (link) {
-      enhanced.innerHTML += `<a href="${link.href}" target="_blank" class="modal-link"><i class="fab fa-github"></i> View on GitHub</a>`;
-    }
+if (link && link.href) {
+  enhanced.innerHTML += `<a href="${link.href}" target="_blank" class="modal-link"><i class="fab fa-github"></i> View on GitHub</a>`;
+} else {
+  enhanced.innerHTML += `<a class="modal-link" style="pointer-events:none;opacity:0.5;"><i class="fab fa-github"></i> GitHub Not Available</a>`;
+}
 
     modalBody.innerHTML = `<h3>${title}</h3>${enhanced.outerHTML}`;
     modal.style.display = "block";

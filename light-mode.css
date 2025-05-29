@@ -1,32 +1,104 @@
 body {
-    background: #f4f4f4;
-    color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #333;
+  background: linear-gradient(120deg, #f0faff 0%, #e0e7ff 50%, #b2f7ef 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -120px;
+  left: -120px;
+  width: 120vw;
+  height: 120vh;
+  background: url('data:image/svg+xml;utf8,<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg"><ellipse cx="400" cy="300" rx="300" ry="180" fill="%2300bcd4" fill-opacity="0.07"/><ellipse cx="200" cy="600" rx="120" ry="80" fill="%230077cc" fill-opacity="0.09"/><ellipse cx="700" cy="100" rx="90" ry="60" fill="%23b2f7ef" fill-opacity="0.08"/></svg>');
+  z-index: 0;
+  pointer-events: none;
+}
+  
+
+  header h1 {
+  background: linear-gradient(90deg, #00bcd4, #0077cc 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 12px rgba(0,188,212,0.10);
+}
+
+.subtitle {
+  background: linear-gradient(90deg, #00bcd4, #0077cc 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #00bcd4; /* fallback */
+  text-shadow: 0 2px 8px rgba(0,188,212,0.10);
+}
+
+.toggle-label {
+  background: linear-gradient(90deg, #00bcd4, #0077cc 80%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 8px rgba(0,188,212,0.10);
+  animation: gradient-move 3s linear infinite;
+}
+  
+ nav {
+  background: rgba(255,255,255,0.01); /* More transparent glass effect */
+  box-shadow: 0 6px 32px rgba(0,188,212,0.07);
+  border: 1px solid rgba(0,188,212,0.10);
+  backdrop-filter: blur(14px);
+}
+
+nav a {
+  color: #0077cc;
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(0,188,212,0.10);
+  color: #00bcd4;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.10);
+}
+
+
+ /* Projects Section Title */
+#projects h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c2d2e; /* Accent color for the title */
+    text-align: left;
+    margin-bottom: 2rem;
   }
   
-  header {
-    background: #1e1e2f;
-    color: white;
+  /* Project Card Title */
+  .project-card h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c2d2e; /* Accent color for project card titles */
+    margin: 0;
+    text-align: center;
   }
-  
-  nav {
-    background: #333;
-  }
-  
-  nav a {
-    color: white;
-  }
-  
-  nav a:hover {
-    color: #00bcd4;
-  }
-  
-  .project-card {
-    background: white;
-  }
-  
+
+
   .project-card:hover {
-    background-color: #f0faff;
-  }
+   background: rgba(0,188,212,0.08); /* Subtle blue tint on hover */
+  box-shadow: 0 8px 20px rgba(0, 119, 204, 0.13), 0 0 15px rgba(0, 119, 204, 0.10);
+}
   
   footer {
     background: #1e1e2f;
@@ -42,25 +114,50 @@ body {
     background-color: #0097a7;
   }
   
-  .modal-content {
-    background: linear-gradient(135deg, #ffffff, #f0faff);
-  }
-  
-  .modal-block {
-    background: #f0faff;
-    border-left: 4px solid #00bcd4;
-  }
-  
-  .modal-link {
-    background-color: #00bcd4;
-  }
-  
-  .modal-link:hover {
-    background-color: #0097a7;
-  }
+.modal-content {
+  background: linear-gradient(135deg, #ffffff 70%, #e0f7fa 100%);
+  color: #222;
+  border: 1px solid #00bcd4;
+  box-shadow: 0 10px 40px rgba(0,188,212,0.10);
+  border-radius: 16px;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-block {
+  background: rgba(0,188,212,0.10);
+  border-left: 4px solid #00bcd4;
+  border-radius: 10px;
+  color: #0077cc;
+  margin-bottom: 1.2rem;
+  padding: 1rem 1.2rem;
+}
+
+.modal-label {
+  color: #00bcd4;
+}
+
+.modal-link {
+  background-color: #00bcd4;
+  color: #fff;
+  box-shadow: 0 4px 16px #00bcd444;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.modal-link:hover {
+  background-color: #0077cc;
+  color: #fff;
+  box-shadow: 0 4px 16px #0077cc44;
+  transform: translateY(-3px);
+}
   
   .about-card {
-    background-color: #ffffff;
     color: #333333;
   }
   
@@ -69,30 +166,35 @@ body {
                 0 0 20px rgba(0, 119, 204, 0.3); /* Subtle glow for light mode */
   }
   
-  .cert-card {
-    background-color: #ffffff;
-    color: #333333;
-  }
+ .cert-card {
+  background: rgba(255,255,255,0.02); /* Same as project-card */
+  color: #222;
+  border: 1px solid rgba(0,188,212,0.10);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
 
+.cert-card:hover {
+  background: rgba(0,188,212,0.08); /* Subtle blue tint on hover */
+  box-shadow: 0 8px 20px rgba(0, 119, 204, 0.13), 0 0 15px rgba(0, 119, 204, 0.10);
+}
 
-  #skills {
-    background-color: #ffffff;
-  }
+.cert-card a {
+  color: #00bcd4;
+}
 
+.cert-card a:hover {
+  color: #0077cc;
+}
 
 /* Section Title */
 .section-title {
-    color: #0d0f0f !important;/* Light mode accent color */
-  }
-  
-  .section-title::after {
-    background-color: #0a0b0b !important; /* Light mode underline color */
-  }
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: #242323 !important; /* Pure black for visibility */
+  text-shadow: none;
+}
 
-
-  #skills ul li {
-    background-color: rgba(240, 240, 240, 0.8);
-  }
   
   #skills ul li:hover {
     background-color: rgba(0, 188, 212, 0.1);
@@ -100,10 +202,16 @@ body {
   
   .tech-item {
     background-color: rgba(240, 240, 240, 0.8);
+    background: rgba(255,255,255,0.12); /* Transparent glass effect */
+    color: #222;
+    border: 1px solid rgba(0,188,212,0.10);
   }
   
   .tech-item:hover {
     background-color: rgba(0, 188, 212, 0.2);
+     background: rgba(0,188,212,0.08);
+    box-shadow: 0 8px 20px rgba(0, 119, 204, 0.13), 0 0 15px rgba(0, 119, 204, 0.10);
+     transform: translateY(-5px);
   }
 
   .tech-item i {
