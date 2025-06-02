@@ -19,6 +19,7 @@ body {
   padding: 1rem 2.5rem;
   margin: 2rem auto 2.5rem auto;
   border-radius: 18px;
+  width: 95vw;
   /* position: sticky;
   top: 1.5rem; */
   z-index: 100;
@@ -36,6 +37,8 @@ nav a {
   text-decoration: none;
   transition: color 0.3s, background 0.3s, box-shadow 0.3s;
   overflow: hidden;
+  margin: 0;
+  display: block;
 }
 
 nav a::after {
