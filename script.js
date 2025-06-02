@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 
-  const text = "Software Engineer";
+  const text = "Back-end Developer | Software Engineer | Web Developer";
   let index = 0;
 
   function typeEffect() {
