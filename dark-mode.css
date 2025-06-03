@@ -100,10 +100,17 @@ nav a:focus {
 #projects h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #c2e1e4; /* Accent color for the title */
+    color: #00e5ff; /* Accent color for the title */
     text-align: left;
     margin-bottom: 2rem;
   }
+
+ .project-hint {
+  background: rgba(35, 41, 70, 0.15); /* semi-transparent glass */
+  color: #00e5ff;
+  border: 1px solid rgba(0,229,255,0.18);
+  box-shadow: 0 4px 24px 0 rgba(0,229,255,0.10);
+}
   
   /* Project Card Title */
   .project-card h3 {
@@ -148,7 +155,7 @@ nav a:focus {
   #modal-body h3 {
     font-size: 2rem;
     font-weight: bold;
-    color: #c2e1e4; /* Accent color for the title */
+    color: #00e5ff; /* Accent color for the title */
     margin-bottom: 1rem;
   }
   
@@ -245,7 +252,7 @@ nav a:focus {
 
   #certifications .section-title,
 #certifications h2 {
-  color: #c2e1e4 !important;
+  color: #00e5ff !important;
 }
   
  .cert-card {
@@ -330,7 +337,7 @@ nav a:focus {
   
 /* Section Title */
 .section-title {
-    color: #c2e1e4 !important; /* Dark mode accent color */
+    color: #00e5ff !important; /* Dark mode accent color */
   }
   
   .section-title::after {

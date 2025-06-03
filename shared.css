@@ -142,6 +142,20 @@ header h1 {
   100% { background-position: 100% 50%; }
 }
 
+.project-hint {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border-radius: 14px;
+  padding: 0.7rem 1.2rem;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px 0 rgba(0,188,212,0.10);
+  transition: background 0.3s, color 0.3s;
+  border: 1px solid rgba(0,188,212,0.18);
+}
+
   .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -338,6 +352,11 @@ body.modal-open > *:not(.modal) {
     font-weight: bold;
     transition: background-color 0.3s ease;
   }
+
+  /* Add spacing between modal links (GitHub and Live Demo) */
+.modal-link + .modal-link {
+  margin-left: 1rem;
+}
   
   .modal-block {
     margin-bottom: 1rem;

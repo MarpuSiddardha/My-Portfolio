@@ -91,9 +91,16 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     }
 
-    const link = rawDetails.querySelector("a");
-if (link && link.href) {
-  enhanced.innerHTML += `<a href="${link.href}" target="_blank" class="modal-link"><i class="fab fa-github"></i> View on GitHub</a>`;
+const links = rawDetails.querySelectorAll("a");
+if (links.length > 0) {
+  links.forEach(a => {
+    // Detect if it's a GitHub link or a live demo
+    if (a.href.includes("github.com")) {
+      enhanced.innerHTML += `<a href="${a.href}" target="_blank" class="modal-link"><i class="fab fa-github"></i> View on GitHub</a>`;
+    } else {
+      enhanced.innerHTML += `<a href="${a.href}" target="_blank" class="modal-link"><i class="fas fa-external-link-alt"></i> Live </a>`;
+    }
+  });
 } else {
   enhanced.innerHTML += `<a class="modal-link" style="pointer-events:none;opacity:0.5;"><i class="fab fa-github"></i> GitHub Not Available</a>`;
 }

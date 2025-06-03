@@ -84,6 +84,13 @@ nav a:focus {
     text-align: left;
     margin-bottom: 2rem;
   }
+
+.project-hint {
+  background: rgba(224, 247, 250, 0.1); /* semi-transparent glass */
+  color: #14c5e8;
+  border: 1px solid rgba(0,188,212,0.18);
+  box-shadow: 0 4px 24px 0 rgba(0,188,212,0.10);
+}
   
   /* Project Card Title */
   .project-card h3 {
