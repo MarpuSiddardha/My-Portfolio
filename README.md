@@ -23,17 +23,6 @@ Welcome to my personal portfolio website! This project showcases my background, 
 
 ---
 
-## 📂 Project Structure
-
----
-
-## 📸 Preview
-
-![portfolio](https://github.com/user-attachments/assets/c04d1af3-049e-4ff6-ad1c-200962aef8eb)
-
-
-
-
 ---
 
 ## 🧠 Projects Highlighted
