@@ -334,7 +334,21 @@ nav a:focus {
     font-size: 0.9rem;
     color: #f0f0f0; /* Ensure text is visible */
   }
+
+  .tech-item .k8s-icon circle {
+    fill: #00e5ff !important;
+  }
+  .tech-item .k8s-icon {
+    color: #00e5ff !important;
+  }
+
   
+  /* Match Kubernetes SVG icon color with other icons in dark mode */
+.k8s-icon circle {
+  fill: #00e5ff !important;
+}
+  
+
 /* Section Title */
 .section-title {
     color: #00e5ff !important; /* Dark mode accent color */

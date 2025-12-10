@@ -64,10 +64,6 @@ body::before {
   backdrop-filter: blur(14px);
 }
 
-nav a {
-  color: #0077cc;
-}
-
 nav a:hover,
 nav a:focus {
   background: rgba(0,188,212,0.10);
@@ -75,6 +71,9 @@ nav a:focus {
   box-shadow: 0 2px 12px rgba(0,188,212,0.10);
 }
 
+nav a {
+  color:#00bcd4
+}
 
  /* Projects Section Title */
 #projects h2 {
@@ -87,7 +86,7 @@ nav a:focus {
 
 .project-hint {
   background: rgba(224, 247, 250, 0.1); /* semi-transparent glass */
-  color: #14c5e8;
+  color: #00bcd4;
   border: 1px solid rgba(0,188,212,0.18);
   box-shadow: 0 4px 24px 0 rgba(0,188,212,0.10);
 }
@@ -222,7 +221,7 @@ nav a:focus {
   }
 
   .tech-item i {
-  color: #0077cc; /* Light mode icon color */
+  color: #00bcd4; /* Light mode icon color */
 }
 
 .tech-item span {

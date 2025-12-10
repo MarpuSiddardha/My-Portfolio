@@ -29,6 +29,7 @@ body {
 }
 
 nav a {
+  color: #00eeff;
   position: relative;
   font-size: 1.1rem;
   font-weight: 600;
@@ -538,6 +539,18 @@ body.modal-open > *:not(.modal) {
 }
 
 #contact a[href*="github.com"]:hover {
-  color: #20bbcf !important;
+  color: #00e5ff !important;
+  text-decoration: underline;
+}
+
+#contact a[href^="mailto:"] {
+  color: #00bcd4;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#contact a[href^="mailto:"]:hover {
+  color: #0077cc;
   text-decoration: underline;
 }

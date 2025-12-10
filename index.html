@@ -61,6 +61,40 @@
   <p class="project-hint">✨ Click on any project card to view more details!</p>
   <div class="project-grid">
 
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Data Acquisition System</h3>
+      <div class="project-details">
+        <p><strong>Role/Title:</strong> Backend Developer</p>
+        <p><strong>Description:</strong> Collecting different types of sensor data and generating reports including rules, alarms, and schedules.</p>
+        <ul>
+          <li>REST API Development using Java and Spring Boot</li>
+          <li>API Documentation with Swagger</li>
+          <li>Implementation of Scheduling Service for automatic report generation</li>
+          <li>API Testing with Postman and Swagger</li>
+        </ul>
+         <p><strong>Tech Stack:</strong>Spring Boot, PostgreSQL, Hibernate, Cron Scheduler, Maven, RESTful APIs </p>
+        <a href="https://github.com/MarpuSiddardha/Data-Acquisition" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Digital Time Capsule</h3>
+  <div class="project-details">
+    <p><strong>Role/Title:</strong> Backend Developer</p>
+    <p><strong>Description:</strong> A secure time capsule application that allows users to store memories, set reminders, and schedule future messages. Built with a robust Spring Boot backend and modern security practices.</p>
+    <ul>
+      <li>Designed and implemented a scalable backend using Spring Boot, featuring JWT-based authentication, role-based access control.</li>
+      <li>Architected and optimized a PostgreSQL database with Spring Data JPA and Hibernate, ensuring efficient data operations and relationships.</li>
+      <li>Integrated Spring Security with JWT authentication, secure password hashing, and role-based authorization to protect sensitive user data and API endpoints.</li>
+      <li>Implemented time-based operations using Spring's Scheduler and Quartz for automated reminders and notifications, enhancing user engagement.</li>
+      <li>Integrated Spring Mail with SMTP to send automated email notifications, including account verification and reminder alerts.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong>Java 17, Spring Boot 3.5.6, PostgreSQL, Spring Security, JWT, Hibernate, Spring Mail, Scheduler, Maven, RESTful APIs </p>
+      <a href="https://github.com/MarpuSiddardha/Digital-Time-Capsule" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
   <div class="project-card" onclick="toggleDetails(this)">
   <h3>Student-Centric E-Commerce Backend</h3>
   <div class="project-details">
@@ -79,21 +113,6 @@
 </div>
 
     <div class="project-card" onclick="toggleDetails(this)">
-      <h3>Data Acquisition System</h3>
-      <div class="project-details">
-        <p><strong>Role/Title:</strong> Backend Developer</p>
-        <p><strong>Description:</strong> Collecting different types of sensor data and generating reports including rules, alarms, and schedules.</p>
-        <ul>
-          <li>REST API Development using Java and Spring Boot</li>
-          <li>API Documentation with Swagger</li>
-          <li>Implementation of Scheduling Service for automatic report generation</li>
-          <li>API Testing with Postman and Swagger</li>
-        </ul>
-        <a href="https://github.com/MarpuSiddardha/Data-Acquisition" target="_blank">View on GitHub</a>
-      </div>
-    </div>
-
-    <div class="project-card" onclick="toggleDetails(this)">
   <h3>Food Expiry Tracker</h3>
   <div class="project-details">
     <p><strong>Role/Title:</strong> Backend Developer</p>
@@ -109,23 +128,6 @@
   </div>
 </div>
 
-
-    <div class="project-card" onclick="toggleDetails(this)">
-      <h3>Weather App</h3>
-      <div class="project-details">
-        <p><strong>Role/Title:</strong> Frontend Developer</p>
-        <p><strong>Description:</strong> A simple and elegant weather application that allows users to search for real-time weather information by city name. Built using HTML, CSS, and JavaScript, and powered by the OpenWeatherMap API.</p>
-        <ul>
-          <li>🔍 Search weather by city name</li>
-          <li>🌡️ Displays temperature, weather condition, humidity, and wind speed</li>
-          <li>📱 Responsive design for mobile and desktop</li>
-          <li>⚡ Real-time data from OpenWeatherMap API</li>
-        </ul>
-        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript (Vanilla), OpenWeatherMap API</p>
-          <a href="https://github.com/MarpuSiddardha/Weather-App" target="_blank">View on GitHub</a>
-          <a href="https://marpusiddardha.github.io/Weather-App/" target="_blank">Live</a>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -145,7 +147,19 @@
       <div class="tech-icons">
         <div class="tech-item"><i class="fas fa-leaf"></i><span>Spring Boot</span></div>
         <div class="tech-item"><i class="fas fa-plug"></i><span>REST APIs</span></div>
-        <div class="tech-item"><i class="fas fa-cube"></i><span>OOPs</span></div>
+        <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+        <div class="tech-item">
+          <!-- Kubernetes SVG icon -->
+          <span style="display: flex; flex-direction: column; align-items: center;">
+            <svg class="k8s-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" style="margin-bottom: 4px;">
+-              <circle cx="16" cy="16" r="16" fill="#00e5ff"/>
+-              <path d="M16 8l2.5 7.5H23l-5.5 4 2.5 7.5L16 20l-4 7.5 2.5-7.5-5.5-4h4.5L16 8z" fill="#fff"/>
++              <circle cx="16" cy="16" r="16" fill="currentColor"/>
++              <path d="M16 8l2.5 7.5H23l-5.5 4 2.5 7.5L16 20l-4 7.5 2.5-7.5-5.5-4h4.5L16 8z" fill="#ffffff"/>
+            </svg>
+            <span>Kubernetes</span>
+          </span>
+        </div>
       </div>
     </li>
 
@@ -186,19 +200,25 @@
   <h2>Certifications</h2>
   <div class="cert-grid">
 
+    
+    <div class="cert-card">
+      <h3>Containers with Docker & Kubernetes</h3>
+      <p><strong>IBM (Coursera)</strong> </p>
+      <a href="Docker with kubernetes.pdf" target="_blank">View Certificate</a>
+    </div>
+
     <div class="cert-card">
       <h3>Introduction to HTML, CSS and JavaScript</h3>
-      <p><strong>Issued by:</strong> IBM (Coursera)</p>
-      <p><strong>Date:</strong> July 2024</p>
+      <p><strong>IBM (Coursera)</strong> </p>
       <a href="IBM_Coursera_html_css_javascript.pdf" target="_blank">View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h3>Agile with Atlassian Jira</h3>
-      <p><strong>Issued by:</strong> Atlassian University (Coursera)</p>
-      <p><strong>Date:</strong> July 2024</p>
+      <p><strong>Atlassian University (Coursera)</strong> </p>
       <a href="JiraAtlassian.pdf" target="_blank">View Certificate</a>
     </div>
+
 
   </div>
 </section>
